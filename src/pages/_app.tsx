@@ -4,7 +4,9 @@ import React from 'react'
 import { RecoilRoot, atom } from 'recoil'
 
 export default function App({ Component, pageProps }: AppProps) {
-  return (<RecoilRoot>
-    <Component {...pageProps} />
-  </RecoilRoot>)
+  return (
+    <RecoilRoot>
+      <Component {...pageProps} />
+    </RecoilRoot>
+  )
 }

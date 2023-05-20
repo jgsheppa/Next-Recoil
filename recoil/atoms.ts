@@ -1,16 +1,17 @@
 import { atom } from "recoil";
-
-export type User = {
-    name: string;
-    age: number;
-}
+import { User } from "./types";
 
 export const userAtom = atom<User | undefined>({
-    key: "userAtom",
+    key: 'userAtom',
     default: undefined
 })
 
-export const dateAtom = atom({
-    key: 'dateAtom',
-    default: new Date().getUTCMonth()
+export const occupationAtom = atom<string>({
+    key: 'occupationAtom',
+    default: undefined
+})
+
+export const yearAtom = atom({
+    key: 'yearAtom',
+    default: new Date().getFullYear()
 })
